@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Demos_on_abcpdf/obj/Debug
+/Demos_on_abcpdf/bin/Debug
+/Demos_on_abcpdf/.vs/Demos_on_abcpdf/v15
