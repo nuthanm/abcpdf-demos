@@ -22,16 +22,32 @@ namespace Demos_on_abcpdf
             #endregion Demo 2 Ends - Single PDF
 
             #region Demo 3 Starts -  Multiple Pages inside single PDF
+            //int theID = doc.AddImageUrl("https://techinuthan.blogspot.com/"); // Converts web page to multiple Images in PDF
+            //while(true)
+            //{
+            //    if (!doc.Chainable(theID))
+            //        break;
+            //    doc.Page = doc.AddPage();
+            //    doc.AddImageToChain(theID);
+            //}
+            //doc.Save(outputFolder + "ConvertWebPageToMultiplePages.pdf");
+            #endregion Demo 3 Ends - Multiple Pages inside single PDF
+
+            #region Demo 4 Starts -  Multiple Pages inside single PDF With Links action Perform
+            doc.HtmlOptions.AddLinks = true;
+            doc.HtmlOptions.LinkPages();
             int theID = doc.AddImageUrl("https://techinuthan.blogspot.com/"); // Converts web page to multiple Images in PDF
-            while(true)
+            while (true)
             {
                 if (!doc.Chainable(theID))
                     break;
                 doc.Page = doc.AddPage();
                 doc.AddImageToChain(theID);
             }
-            doc.Save(outputFolder + "ConvertWebPageToMultiplePages.pdf");
-            #endregion Demo 3 Ends - Multiple Pages inside single PDF
+            
+            doc.Save(outputFolder + "ConvertWebPageToMultiplePagesWithLinks.pdf");
+            #endregion Demo 4 Ends - Multiple Pages inside single PDF With Links action Perform
+
 
             Console.WriteLine("PDF Generated Successfully");
             Console.ReadLine();
