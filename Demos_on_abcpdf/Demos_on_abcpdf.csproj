@@ -53,6 +53,8 @@
     <None Include="App.config" />
     <None Include="Output\PDFWithSimpleText.pdf" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Input\IMG_2396.JPG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
