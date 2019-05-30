@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using WebSupergoo.ABCpdf11;
 
 namespace Demos_on_abcpdf
@@ -7,9 +8,12 @@ namespace Demos_on_abcpdf
     {
         static void Main(string[] args)
         {
-            string outputFolder = @"D:\Projects\AbcPDF_Demos\abcpdf-demos\Demos_on_abcpdf\Output\";
-            string inputFolder = @"D:\Projects\AbcPDF_Demos\abcpdf-demos\Demos_on_abcpdf\Input\";
-            Doc doc = new Doc(); // This Doc class is coming from WebSupergoo.ABCpdf11 namespace.
+            string theBasePath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
+            string outputFolder = theBasePath + @"\Output\";
+            string inputFolder = theBasePath + @"\Input\";
+
+            // This Doc class is coming from WebSupergoo.ABCpdf11 namespace.
+            Doc doc = new Doc();
 
             #region Demo 1 Starts
             //// Create a basic PDF With text
